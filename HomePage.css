@@ -1,0 +1,227 @@
+.Home
+{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2.5rem;
+    width: 90%;
+    height: auto;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+.img-container
+{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.img-container::before , .img-container::after
+{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+       var(--red)
+    );
+    animation: revolve 2s linear 2s infinite  ;
+}
+.img-container::after
+{
+    animation-delay: 1s;
+}
+@keyframes revolve {
+    from
+    {
+     transform: rotate(0deg);
+    }
+    to
+    {
+     transform: rotate(360deg);
+    }
+}
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+.Details
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+.Details h2
+{
+font-size: 2.5rem;
+}
+.Details h2 span
+{
+    background: linear-gradient(to right,var(--red),var(--white));
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--red);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.Details h3
+{
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#typing-span
+{
+    color: var(--red);
+    display: inline-block;
+    min-width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.Details h3 span::after
+{
+    content: "|";
+    margin-left: 5px;
+    animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+}
+.Details p
+{
+    font-size: 1rem;
+    
+}
+.Bottom
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Bottom button
+{
+    width: 12rem;
+    padding: 0.8rem  0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: var(--red);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+.Bottom button:hover
+{
+   box-shadow:
+    3px 3px 3px var(--red),
+   -3px 3px 3px var(--red),
+    3px -3px 3px var(--red),
+   -3px -3px 3px var(--red);
+}
+.Social-Icons
+{
+    display: flex;
+    gap: 20px;
+    font-size: 2.5rem;
+}
+.Social-Icons a
+{
+color: var(--white);
+transition: all ease 0.3s;
+}
+.Social-Icons a:hover
+{
+    color: var(--red);
+    scale: 105%;
+}
+@media screen and (width >= 768px)
+ {
+    .Home
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        gap: 3.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    .Details
+    {
+        gap: 3rem;
+    }
+    .Details h2
+    {
+        font-size: 5rem;
+    }
+    .Details h3
+    {
+        font-size: 2.5rem;
+    }
+    .Details p
+    {
+        font-size: 1.6rem;
+    }
+    .Social-Icons
+    {
+        font-size: 3rem;
+    }
+    .Bottom
+    {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .Bottom button{
+       width: 12rem;
+       padding: 0.8rem  0;
+       font-size: 1.3rem;
+       font-weight: 600;
+    }
+}
+@media screen and (width >= 1024px)
+ {
+    .Home
+    {
+        margin: 3rem auto;
+    }
+    .img-container
+    {
+        width: 300px;
+        height: 300px;
+    }
+    .Details
+    {
+        gap: 30px;
+    }
+    .Details h2
+    {
+        font-size: 3rem;
+    }
+     .Details h3
+    {
+        font-size: 2.8rem;
+    }
+    .Details p
+    {
+        font-size: 1.5rem;
+    }
+}

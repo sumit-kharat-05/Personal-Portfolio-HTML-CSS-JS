@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root{
+    --primary:#000000;
+    --secondary:#BA5A5A;
+    --disabled:#F7E49B;
+    --red:#FF0000;
+    --white:#FFF8F0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: "EB Garamond", serif;
+}
+body,html{
+    background: var(--primary);
+    color: var(--white);
+    min-width: 100dvh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+.main-container
+{
+    max-width: 750px;
+    padding: 1rem;
+    margin: 0 auto;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 1rem 0;
+}
+.brand-info
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.brand-info img
+{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+.brand-info h2
+{
+   font-size: 1.7rem;
+   font-weight: 800;
+   display: flex;
+   align-items: center;
+}
+#menu-toggle
+{
+    display: none;
+}
+.menu-icon
+{
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+#overlay
+{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+/* #menu-toggle:checked ~ #overlay
+{
+    display: block;
+    position: fixed;
+    inset :0;
+    top: 7rem;
+    height: 100dvh;
+    background: var(--primary);
+    opacity: 1;
+    pointer-events: none;
+} */
+nav {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 1rem;
+    z-index: 1000;
+    /* background: var(--primary);  */
+    transform: translateX(150%);
+    transition: all 0.5s ease;
+}
+#menu-toggle:checked ~ nav {
+    transform: translateX(0%);
+
+}
+nav a{
+    text-align: center;
+    padding: 0.8rem;
+    font-size:1.5rem;
+    border: 5px solid var(--secondary);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--white);
+    opacity: 0;
+    transform: translateX(150%);
+    transition: all 0.5s ease;
+}
+#menu-toggle:checked ~ nav a {
+    opacity: 1;
+    transform: translateX(0%);
+    transition-delay: calc(var(--i)*0.2s);
+}
+
+@media screen and (width >= 1024px) {
+    .main-container{
+        max-width: 950px;
+    }
+    header
+    {
+        position: static;
+    }
+    .brand-info
+    {
+        gap: 20px;
+    }
+    .brand-info img {
+      height: 90px;
+      width: 90px;
+    }
+    .brand-info h2
+    {
+        font-size: 2.5rem;
+    }
+    #menu-toggle
+    {
+        display: none;
+    }
+    .menu-icon
+    {
+        display: none;
+    }
+    nav
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        position: static;
+        transform: translateX(0%);
+    }
+    nav a
+    {
+        padding: 0;
+        font-size: 1.5rem;
+        border: none;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    nav a:hover
+    {
+        color: var(--red);
+        
+    }
+}
+
+@media screen and (width >= 1250px) {
+    .main-container
+    {
+        max-width: 1200px;
+    }
+    .brand-info
+    {
+        gap: 35px;
+    }
+    .brand-info img
+    {
+        height: 100px;
+        width: 100px;
+    }
+    .brand-info h2
+    {
+        font-size: 3rem;
+    }
+    nav
+    {
+        gap: 2.5rem;
+    }
+    nav a
+    {
+        font-size: 2rem;
+    }
+}
