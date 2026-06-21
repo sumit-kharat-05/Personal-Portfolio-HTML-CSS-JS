@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="About.css">
     <!-- Basic Icons -->
 <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 <!-- Filled Icons -->
@@ -29,14 +30,14 @@
             <label for="menu-toggle" id="overlay">close</label>
             
             <nav>
-            <a href="#" style="--i:1">Home</a>
-            <a href="#" style="--i:2">About</a>
-            <a href="#" style="--i:3">Projects</a>
-            <a href="#" style="--i:4">Contacts</a>
+            <a href="#" style="--i:1" data-tab="Home" class="navlink active">Home</a>
+            <a href="#" style="--i:2" data-tab="About" class="navlink ">About</a>
+            <a href="#" style="--i:3" data-tab="Projects" class="navlink ">Projects</a>
+            <a href="#" style="--i:4" data-tab="Contacts" class="navlink ">Contacts</a>
             </nav>
             </div>
         </header>
-        <section class="Home">
+        <section id="Home" class="content active">
             <div class="Details">
                 <h2>
                     <span>SUMIT</span>
@@ -68,6 +69,9 @@
                 <img src="./assets/Profile .jpeg" alt="POrfile Picture">
             </div>
         </section>
+        <section id="About" class="content">About</section>
+        <section id="Projects" class="content">Projects</section>
+        <section id="Contacts" class="content">Contacts</section>
     </div>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/587103b97d.js" crossorigin="anonymous"></script>
