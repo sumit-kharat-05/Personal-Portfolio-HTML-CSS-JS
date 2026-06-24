@@ -1,4 +1,4 @@
-#about.content.active
+/* #about.content.active
 {
     display: flex;
     flex-direction: column-reverse;
@@ -7,4 +7,270 @@
     width: 90%;
     max-width: 700px;
     margin: 2rem auto;
+} */
+#About.content.active
+{
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+}
+.Sidebar
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 450px;
+    margin: 0 auto;
+    grid-column: span 3;
+}
+.Sidebar h3{
+    font-size: 2rem;
+}
+.Sidebar p{
+    font-size: 1.2rem;
+    text-align: justify;
+    
+}
+.Tabs
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-column: span 3;
+}
+.Sidebar + .Tabs span
+{
+    border: 5px solid transparent;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: #273338;
+    transition: all linear 0.3s;
+}
+.Sidebar + .Tabs span:hover
+{
+    border-color: var(--red);
+    cursor: pointer;
+    color: var(--disabled);
+}
+.Tab.active
+{
+    border: 5px solid var(--red) !important;
+    color: var(--disabled);
+}
+.Tab-Content
+{
+    display: none;
+}
+.Tab-Content.active
+{
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+aside h2
+{
+    font-size: 2rem;
+}
+aside h2 span
+{
+    color: var(--red);
+}
+.ExperienceList , .EducationList , .SkillsList , .AboutMeList
+{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 1rem;
+}
+.SkillsList
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 1rem;
+}
+.ExperienceList::-webkit-scrollbar , .EducationList::-webkit-scrollbar , .SkillsList::-webkit-scrollbar ,.AboutMeList::-webkit-scrollbar
+{
+    width: 5px;
+}
+.ExperienceList::-webkit-scrollbar-thumb , .EducationList::-webkit-scrollbar-thumb ,
+.SkillsList::-webkit-scrollbar-thumb , .AboutMeList::-webkit-scrollbar-thumb
+{
+    background-color: var(--red);
+    border-radius: 10px;
+}
+.ExperienceBox , .EducationBox , .SkillsBox , .AboutMeBox
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border: 5px solid transparent;
+    padding: 3px;
+    border-radius: 10px ;
+    cursor: pointer;
+    background-color: #273338;
+    transition: all linear 0.3s;
+}
+.ExperienceBox:hover , .EducationBox:hover , .SkillsBox:hover , .AboutMeBox:hover
+{
+    border-color: var(--red);
+    box-shadow: 5px 5px 5px var(--red),
+    -5px 5px 5px var(--red),
+    5px -5px 5px var(--red),
+    -5px -5px 5px var(--red);
+}
+.ExperienceBox h4, .EducationBox h4 
+{
+    font-size: 1.5rem;
+}
+.ExperienceBox h3, .EducationBox h3 
+{
+    font-size: 1.4rem;
+    color: var(--secondary);
+}
+.ExperienceBox p, .EducationBox p 
+{
+    display: -webkit-box;
+    text-align: justify;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.CompanyName, .InstitutionName 
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.CompanyName span , .InstitutionName span
+{
+    border: 6px solid var(--red);
+    border-radius: 50%;
+}
+.CompanyName p , .InstitutionName p
+{
+    font-size: 1.2rem;
+}
+.SkillsBox
+{
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-color: #273338;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+.SkillsBox img
+{
+    width: 4rem;
+    height: auto;
+}
+.AboutMeList
+{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+.AboutMeBox
+{
+    display: grid;
+    grid-template-columns: subgrid;
+}
+.AboutMeBox span:first-child
+{
+    color: var(--red);
+}
+@media screen and (min-width: 768px)
+{
+    /* #About.content.active
+    {
+      grid-template-columns: repeat(7,1fr);
+      gap: 3rem;
+    }
+    .Sidebar
+    {
+        grid-column: span 3;
+    }
+    .Sidebar + .Tabs
+    {
+        gap: 1.5rem;
+    }
+    .Tab-Content.active
+    {
+        max-width: 100%;
+        margin: 0;
+        grid-column: span 4;
+    } */
+    #About.content.active
+    {
+        grid-template-columns: repeat(7,1fr);
+        gap: 3rem;
+    }
+
+    .Sidebar
+    {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .Tabs
+    {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+
+    .Tab-Content.active
+    {
+        grid-column: 4 / 8;
+        grid-row: 1 / 3;
+
+        max-width: 100%;
+        margin: 0;
+    }
+    aside h2
+    {
+        font-size: 3rem;
+    }
+    aside p
+    {
+        font-size: 1.5rem;
+    }
+    .ExperienceBox h3 , .EducationBox h3
+    {
+        font-size: 1.5rem;
+    }
+    .CompanyName p .InstitutionName p
+    {
+        font-size: 1.3rem;
+    }
+    .SkillsList
+    {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (width >= 1024px) {
+    #About.content active
+    {
+        gap: 5rem;
+    }
+    .ExperienceBox h3 , .EducationBox h3
+    {
+        font-size: 1.8rem;
+    }
 }

@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Personal Portfolio | HTML CSS JS</title>
+    <link rel="shortcut icon" href="assets/Pictures/cv.png" type="image/x-icon">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="HomePage.css">
     <link rel="stylesheet" href="About.css">
-    <!-- Basic Icons -->
+
 <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-<!-- Filled Icons -->
 <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
-<!-- Brand Icons -->
 <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
@@ -21,13 +30,13 @@
     <div class="main-container">
         <header>
             <div class="brand-info">
-             <img src="./assets/Profile .jpeg" >
+             <img src="./assets/Pictures/portfolio.png" alt="Logo" title="Logo" loading="lazy">
              <h2>SUMIT</h2>
             </div>
             <div class="menu-area">
             <input type="checkbox"  id="menu-toggle" hidden>
             <label for="menu-toggle" class="menu-icon"> <i class="bx bx-menu"></i></label>
-            <label for="menu-toggle" id="overlay">close</label>
+            <label for="menu-toggle" id="overlay"></label>
             
             <nav>
             <a href="#" style="--i:1" data-tab="Home" class="navlink active">Home</a>
@@ -50,7 +59,7 @@
                 </h3>
                 <p>I am currently pursuing a <b> Diploma in Information Technology</b> while simultaneously completing my <b>B.Tech in Data Science.</b>  My academic journey blends strong foundational IT skills with advanced data-driven problem-solving. Through this dual path, I am building expertise in programming, data analytics, machine learning fundamentals, and modern software development.</p>
                 <div class="Bottom">
-                    <button>Download Resume</button>
+                    <button class="btn">Download Resume</button>
                        <div class="Social-Icons">
                 <a href="#">
                  <i class="fa-brands fa-instagram" style="color: rgb(246, 47, 47);"></i>
@@ -66,14 +75,62 @@
              
             </div>
             <div class="img-container">
-                <img src="./assets/Profile .jpeg" alt="POrfile Picture">
+                <img src="./assets/Pictures/Profile .jpeg" alt="Porfile Picture">
             </div>
         </section>
-        <section id="About" class="content">About</section>
+        <section id="About" class="content">
+            <div class="Sidebar">
+                <h3>Why Hire Me ?</h3>
+                <p>I’m A Passionate And Experienced MERN Stack , MEAN Stack , Full Stack Web Developer Who Simplifies Complex Concepts.I deliver quality and reliable websites to client needs with full dedication and care.</p>
+            </div>
+            <div class="Tabs">
+                <span data-section = "Experience" class="Tab">
+                Experience
+                </span>
+                <span data-section = "Education" class="Tab">
+                Education
+                </span>
+                <span data-section = "Skills" class="Tab">
+                Skills
+                </span>
+                <span data-section = "AboutMe" class="Tab">
+                About Me
+                </span>
+            </div>
+            <aside id="Experience" class="Tab-Content active">
+                <h2>My <span>Experience</span></h2>
+                <p>Here are some of my professional experiences that showcase my journey, skills, and dedication in web development and collaboration.</p>
+                <div class="ExperienceList">
+
+                </div>
+            </aside>
+            <aside id="Education" class="Tab-Content ">
+                <h2>My <span>Education</span></h2>
+                <p>Here are my educational qualifications that have built a strong foundation in technology, problem-solving, and continuous learning in web development.</p>
+                <div class="EducationList">
+                    
+                </div>
+            </aside>
+            <aside id="Skills" class="Tab-Content ">
+                <h2>My <span>Skills</span></h2>
+                <p>Here are the key skills I’ve mastered through hands-on experience, enabling me to build high-quality, scalable, and responsive web applications.</p>
+                <div class="SkillsList">
+                    
+                </div>
+            </aside>
+            <aside id="AboutMe" class="Tab-Content ">
+                <h2>About <span>Me</span></h2>
+                <p>I'm a passionate developer dedicated to building impactful digital experiences, blending creativity and code to solve real-world problems efficiently and effectively.</p>
+                <div class="AboutMeList">
+                    
+                </div>
+            </aside>
+        </section>
         <section id="Projects" class="content">Projects</section>
         <section id="Contacts" class="content">Contacts</section>
     </div>
-    <script src="script.js"></script>
+    <script src="Navbar-HomePage.js"></script>
+    <script src="About.js"></script>
     <script src="https://kit.fontawesome.com/587103b97d.js" crossorigin="anonymous"></script>
 </body>
 </html>

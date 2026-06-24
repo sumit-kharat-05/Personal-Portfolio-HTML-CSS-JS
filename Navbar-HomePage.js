@@ -1,13 +1,15 @@
-const toggle = document.getElementById("#menu-toggle")
+const toggle = document.getElementById("menu-toggle")
 
 if (toggle) {
     toggle.addEventListener("change",()=>{
-    document.body.classList.toggle("no-scroll");
+    document.body.classList.toggle("no-scroll",toggle.checked);
     });
 }
 
 const words = [
     "Web Developer",
+    "MERN Stack Developer",
+    "MEAN Stack Developer",
     "Full Stack Web Developer",
     "Software Developer",
     "Freelancer",
@@ -86,5 +88,7 @@ navlinks.forEach((link) => {
             tab.classList.remove("active"); 
         }
      });
+      toggle.checked = false;
+        document.body.classList.remove("no-scroll");
     });
 });
