@@ -1,0 +1,146 @@
+#Contacts.content.active
+{
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+    grid-template-columns:repeat(1,1fr)
+}
+.ContactInfo
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.ContactInfo p
+{
+    font-size: 1.3rem;
+    /* text-align:justify ; */
+}
+.ContactInfo h2
+{
+    font-size: 2.5rem;
+}
+.ContactInfo h2 span
+{
+    color: var(--red);
+}
+.ContactMedia
+{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1.5rem;
+}
+.Media
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.Media span
+{
+    background-color: #273338;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.Media i
+{
+    font-size: 2.5rem;
+    color: red;
+    background-color: #273338;
+}
+.ContactValue p
+{
+    color: var(--red);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.ContactValue a
+{
+    text-decoration: none;
+    color: var(--disabled);
+    font-size: 1.4rem;
+    transition: all linear 0.3s;
+}
+.ContactValue a:hover
+{
+    color: rgba(155, 213, 229);
+    text-decoration: underline;
+}
+form
+{
+    background-color: #273338;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+fieldset
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+    border: none;
+}
+legend
+{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+legend span
+{
+    color: var(--red);
+}
+label
+{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.Field
+{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    
+}
+.Field div{
+    display: grid;
+    gap: 1rem;
+}
+input , textarea
+{
+    background: var(--disabled);
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 0.7rem;
+    margin: 0.3rem;
+    border-radius: 5px;
+    color: var(--primary);
+}
+input::placeholder , textarea::placeholder
+{
+    color: var(--primary);
+    opacity: 0.6;
+}
+@media screen and (width >= 768px) {
+    #Contacts.content.active
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (width >= 1024px) {
+    .ContactMedia
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Field
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .Field div:last-child
+    {
+        grid-column: span 2;
+    }
+}

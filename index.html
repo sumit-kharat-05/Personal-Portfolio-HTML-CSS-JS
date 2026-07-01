@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio | HTML CSS JS</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="shortcut icon" href="assets/Pictures/cv.png" type="image/x-icon">
-    <link rel="stylesheet" href="Navbar.css">
-    <link rel="stylesheet" href="HomePage.css">
-    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/HomePage.css">
+    <link rel="stylesheet" href="./Styles/About.css">
+    <link rel="stylesheet" href="./Styles/Project.css">
+    <link rel="stylesheet" href="./Styles/Contact.css">
 
 <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
@@ -126,11 +129,65 @@
                 </div>
             </aside>
         </section>
-        <section id="Projects" class="content">Projects</section>
-        <section id="Contacts" class="content">Contacts</section>
+        <section id="Projects" class="content">
+            <!-- <h2>Latest <span>Projects</span></h2> -->
+            <div class="Projects">
+    
+            </div>
+        </section>
+        <section id="Contacts" class="content">
+          <div class="ContactInfo">
+            <h2>Let`s Work <span>Together</span></h2>
+            <p>"Have a project in mind or just want to say hello? Feel free to reach out anytime. I'm always open to discussing new ideas, collaborations, or opportunities!</p>
+            <div class="ContactMedia">
+            
+            </div>
+          </div>
+          <form action="#" id="ContactForm">
+            <fieldset>
+                <legend>
+                   <span>Contact </span>Me
+                </legend>
+                <div class="Field">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Write Your Own Name">
+                    </div>
+               
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Write Your Own Email">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Write Your Mobile Number">
+                    </div>
+                    <div>
+                        <label for="msg">Message:</label>
+                        <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Write Something ... !"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn" id="sendmsg">Send Me</button>
+            </fieldset>
+          </form>
+        </section>
     </div>
-    <script src="Navbar-HomePage.js"></script>
-    <script src="About.js"></script>
+    <script src="./Scripts/Navbar-HomePage.js"></script>
+    <script src="./Scripts/About.js"></script>
+    <script src="./Scripts/Project.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./Scripts/Contact.js"></script>
     <script src="https://kit.fontawesome.com/587103b97d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+     <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "u1oSVslr_OJR-w5U0",
+            });
+        })();
+    </script>
+    
 </body>
 </html>
